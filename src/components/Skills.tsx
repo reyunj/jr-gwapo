@@ -35,7 +35,7 @@ const Skills = () => {
       skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vue.js'],
     },
     {
-      image: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop',
       title: 'Backend',
       skills: ['Node.js', 'Python', 'Express', 'GraphQL', 'REST APIs'],
     },
