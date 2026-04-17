@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { Monitor, Server, Database, Code2, Smartphone, GitBranch } from 'lucide-react'
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -31,40 +30,34 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: <Monitor className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop',
       title: 'Frontend',
       skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vue.js'],
-      color: 'from-blue-500 to-blue-600',
     },
     {
-      icon: <Server className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=400&h=300&fit=crop',
       title: 'Backend',
       skills: ['Node.js', 'Python', 'Express', 'GraphQL', 'REST APIs'],
-      color: 'from-green-500 to-green-600',
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop',
       title: 'Database',
       skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Supabase'],
-      color: 'from-purple-500 to-purple-600',
     },
     {
-      icon: <Code2 className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=300&fit=crop',
       title: 'Web Technologies',
       skills: ['HTML5', 'CSS3', 'JavaScript', 'Webpack', 'Vite'],
-      color: 'from-orange-500 to-orange-600',
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop',
       title: 'Mobile',
       skills: ['React Native', 'Flutter', 'iOS', 'Android', 'PWA'],
-      color: 'from-pink-500 to-pink-600',
     },
     {
-      icon: <GitBranch className="w-8 h-8" />,
+      image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop',
       title: 'DevOps & Tools',
       skills: ['Git', 'Docker', 'AWS', 'CI/CD', 'Linux'],
-      color: 'from-cyan-500 to-cyan-600',
     },
   ]
 
@@ -106,23 +99,29 @@ const Skills = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
+              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
             >
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform`}>
-                {category.icon}
+              <div className="h-40 overflow-hidden">
+                <img
+                  src={category.image}
+                  alt={category.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
