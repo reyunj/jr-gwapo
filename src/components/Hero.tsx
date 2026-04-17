@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { ArrowDown, Facebook, Mail } from 'lucide-react'
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -93,20 +93,12 @@ const Hero = () => {
             className="flex justify-center gap-6"
           >
             <a
-              href="https://github.com"
+              href="https://www.facebook.com/PelegrinoJIAR"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
             >
-              <Github className="w-6 h-6" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-            >
-              <Linkedin className="w-6 h-6" />
+              <Facebook className="w-6 h-6" />
             </a>
             <a
               href="mailto:contact@example.com"

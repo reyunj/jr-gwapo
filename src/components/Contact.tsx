@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Facebook } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,19 +78,9 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: <Github className="w-6 h-6" />,
-      name: 'GitHub',
-      link: 'https://github.com',
-    },
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      name: 'LinkedIn',
-      link: 'https://linkedin.com',
-    },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      name: 'Twitter',
-      link: 'https://twitter.com',
+      icon: <Facebook className="w-6 h-6" />,
+      name: 'Facebook',
+      link: 'https://www.facebook.com/PelegrinoJIAR',
     },
   ]
 
