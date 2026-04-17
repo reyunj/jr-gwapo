@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { Cpu, Layout, Database, Globe, Smartphone, Cloud } from 'lucide-react'
+import { Monitor, Server, Database, Code2, Smartphone, GitBranch } from 'lucide-react'
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -31,13 +31,13 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: <Layout className="w-8 h-8" />,
+      icon: <Monitor className="w-8 h-8" />,
       title: 'Frontend',
       skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vue.js'],
       color: 'from-blue-500 to-blue-600',
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Server className="w-8 h-8" />,
       title: 'Backend',
       skills: ['Node.js', 'Python', 'Express', 'GraphQL', 'REST APIs'],
       color: 'from-green-500 to-green-600',
@@ -49,7 +49,7 @@ const Skills = () => {
       color: 'from-purple-500 to-purple-600',
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Code2 className="w-8 h-8" />,
       title: 'Web Technologies',
       skills: ['HTML5', 'CSS3', 'JavaScript', 'Webpack', 'Vite'],
       color: 'from-orange-500 to-orange-600',
@@ -61,7 +61,7 @@ const Skills = () => {
       color: 'from-pink-500 to-pink-600',
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <GitBranch className="w-8 h-8" />,
       title: 'DevOps & Tools',
       skills: ['Git', 'Docker', 'AWS', 'CI/CD', 'Linux'],
       color: 'from-cyan-500 to-cyan-600',
