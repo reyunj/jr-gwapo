@@ -34,7 +34,7 @@ const Projects = () => {
       title: 'E-Commerce Platform',
       description: 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics dashboard.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
-      image: 'from-purple-500 to-pink-500',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -42,7 +42,7 @@ const Projects = () => {
       title: 'Task Management App',
       description: 'A collaborative task management application with real-time updates, team features, and productivity analytics.',
       technologies: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind', 'Framer Motion'],
-      image: 'from-blue-500 to-cyan-500',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -50,7 +50,7 @@ const Projects = () => {
       title: 'Weather Dashboard',
       description: 'A beautiful weather dashboard with location-based forecasts, historical data visualization, and severe weather alerts.',
       technologies: ['Vue.js', 'OpenWeather API', 'Chart.js', 'Geolocation API'],
-      image: 'from-orange-500 to-red-500',
+      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -58,7 +58,7 @@ const Projects = () => {
       title: 'Social Media Dashboard',
       description: 'A comprehensive social media management tool for scheduling posts, analyzing engagement, and managing multiple accounts.',
       technologies: ['React', 'GraphQL', 'MongoDB', 'Express', 'JWT'],
-      image: 'from-green-500 to-teal-500',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -66,7 +66,7 @@ const Projects = () => {
       title: 'AI Chat Assistant',
       description: 'An intelligent chat assistant powered by machine learning, capable of natural language processing and context awareness.',
       technologies: ['Python', 'TensorFlow', 'FastAPI', 'React', 'WebSocket'],
-      image: 'from-indigo-500 to-purple-500',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -74,7 +74,7 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website with smooth animations, dark mode support, and optimized performance.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-      image: 'from-pink-500 to-rose-500',
+      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
       github: '#',
       live: '#',
     },
@@ -120,12 +120,12 @@ const Projects = () => {
               variants={itemVariants}
               className="group bg-gray-50 dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div
-                className={`h-48 bg-gradient-to-br ${project.image} flex items-center justify-center`}
-              >
-                <div className="text-white text-6xl font-bold opacity-20 group-hover:opacity-30 transition-opacity">
-                  {index + 1}
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               
               <div className="p-6">
