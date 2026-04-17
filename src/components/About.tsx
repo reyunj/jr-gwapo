@@ -78,7 +78,7 @@ const About = () => {
             <motion.div variants={itemVariants} className="relative">
               <div className="w-full h-96 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl shadow-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="/profile.jpg"
                   alt="Rocillo Antipuesto Jr."
                   className="w-full h-full object-cover"
                 />
